@@ -16,7 +16,7 @@ namespace _9_uslovniy_operator
 
             for (int i = randomNumber; i < maximumRangeValue; i+= randomNumber)
             {
-                if (minimumRangeValue <= i && i < maximumRangeValue)
+                if (minimumRangeValue <= i)
                 {
                     Console.Write($"{i} ");
                 }
