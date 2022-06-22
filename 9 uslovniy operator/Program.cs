@@ -7,18 +7,16 @@ namespace _9_uslovniy_operator
         static void Main(string[] args)
         {
             Random random = new Random();
-            int randomNumber = random.Next(0,28);
+            int beginningOfRange = 0;
+            int endOfRange = 28;
+            int randomNumber = random.Next(beginningOfRange,endOfRange);
             int minimumRangeValue = 100;
             int maximumRangeValue = 1000;
             Console.WriteLine(randomNumber);
 
             for (int i = randomNumber; i < maximumRangeValue; i+= randomNumber)
             {
-                if (i <= minimumRangeValue)
-                {
-                    continue;
-                }
-                else if (minimumRangeValue <= i || i < maximumRangeValue)
+                if (minimumRangeValue <= i && i < maximumRangeValue)
                 {
                     Console.Write($"{i} ");
                 }
